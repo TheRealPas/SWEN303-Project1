@@ -1,0 +1,13 @@
+extends layout
+
+block content
+	+nav-tabs([{text:"Home",href:"/search"}],0)
+	.jumbotron
+		center
+			h3 #{title}
+
+	br
+	.container
+		!{content}
+
+	

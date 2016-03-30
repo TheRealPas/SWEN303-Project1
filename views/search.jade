@@ -1,0 +1,21 @@
+extends layout
+
+block content
+	+nav-tabs([{text:"Home",href:"/search"}],0)
+	
+	.jumbotron
+		h1 Welcome to The Colenso Project
+		p  The Colenso Society, Victoria University of Wellington and MTG Hawke's Bay are delighted to announce the establishment of the Colenso Project. This exciting new initiative seeks to build on the blossoming national and international interest in William Colenso’s life and ideas as the result of the William Colenso Bicentenary Celebrations in Hawke’s Bay in 2011, and a body of new publications and research.
+	.container
+		form(action="/search", method="get")
+			.form-group
+				label Search for what you want below
+				input(type="text", class="form-control", name="keywordsearchString", value="#{keywordsearchString}")
+				br
+				
+				br
+				input(type="submit", class="btn btn-success", value="Search")
+
+	.container
+		ol !{content}
+	
